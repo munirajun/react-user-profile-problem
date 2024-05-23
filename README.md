@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Instructions
+
+Before running the app setup access key for https://unsplash.com to access it's APIs and set `REACT_APP_UNSPLASH_ACCESS_KEY` environment variable in `.env.local` file in root directory
+
 ## Available Scripts
 
 In the project directory, you can run:
