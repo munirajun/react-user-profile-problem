@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { UserProfileContext } from "../contexts/UserProfileContext";
-import "./ProfileInfoForm.css";
 
 export const ProfileInfoForm = () => {
   const [name, setName] = useState("");
@@ -31,13 +30,17 @@ export const ProfileInfoForm = () => {
   ];
 
   return (
-    <div className="form-container">
+    <div>
+      <div className="mb-3">
+        <h4 className="h4">Update Profile Info</h4>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name" label="name">
+        <div className="mb-3">
+          <label htmlFor="name" label="name" className="form-label">
             Name
           </label>
           <input
+            className="form-control"
             type="text"
             name="name"
             id="name"
@@ -46,11 +49,12 @@ export const ProfileInfoForm = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="surname" label="surname">
+        <div className="mb-3">
+          <label htmlFor="surname" label="surname" className="form-label">
             Surname
           </label>
           <input
+            className="form-control"
             type="text"
             name="surname"
             id="surname"
@@ -59,11 +63,12 @@ export const ProfileInfoForm = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="topic" label="topic">
+        <div className="mb-3">
+          <label htmlFor="topic" label="topic" className="form-label">
             Topic
           </label>
           <select
+            className="form-control"
             name="topic"
             label="topic"
             id="topic"
@@ -79,11 +84,16 @@ export const ProfileInfoForm = () => {
           </select>
         </div>
         {topic === "Other" && (
-          <div className="form-group">
-            <label htmlFor="otherTopic" label="otherTopic">
+          <div className="mb-3">
+            <label
+              htmlFor="otherTopic"
+              label="otherTopic"
+              className="form-label"
+            >
               Other Topic
             </label>
             <input
+              className="form-control"
               type="text"
               name="otherTopic"
               id="otherTopic"
@@ -93,7 +103,11 @@ export const ProfileInfoForm = () => {
             />
           </div>
         )}
-        <button type="submit">Submit</button>
+        <div className="mb-3">
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
