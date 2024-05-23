@@ -47,11 +47,14 @@ const UpdateProfileImage = () => {
         {!loading && image && (
           <figure className="figure">
             <img
+              data-testid="image-for-selection"
               className="figure-img image-fluid rounded"
               src={image.urls.small}
-              alt={image.urls.small}
+              alt={image.description}
             />
-            <figcaption class="figure-caption">{image.description}</figcaption>
+            <figcaption className="figure-caption">
+              {image.description}
+            </figcaption>
           </figure>
         )}
       </div>

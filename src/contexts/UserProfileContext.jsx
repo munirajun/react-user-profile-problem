@@ -9,7 +9,6 @@ const initialState = {
 };
 
 const userProfileReducer = (state, action) => {
-  console.log(state, action);
   switch (action.type) {
     case "UPDATE_PROFILE_INFO":
       return {
@@ -35,4 +34,4 @@ const UserProfileContextProvider = ({ children }) => {
   );
 };
 
-export { UserProfileContextProvider, UserProfileContext };
+export { initialState, UserProfileContextProvider, UserProfileContext };
